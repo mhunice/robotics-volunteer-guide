@@ -44,7 +44,7 @@ body.access-locked { overflow: hidden; }
 body.access-locked > :not(.access-gate) { visibility: hidden; }
 .access-gate { position: fixed; inset: 0; z-index: 1000; display: grid; place-items: center; padding: 24px; background: radial-gradient(circle at 20% 10%, #fff 0, transparent 36%), linear-gradient(145deg, #eaf4fc, #f8fbfd 55%, #e7eff6); }
 .access-card { width: min(430px, 100%); padding: 42px 38px 34px; color: #17324d; border: 1px solid rgba(7,85,159,.14); border-radius: 24px; background: rgba(255,255,255,.94); box-shadow: 0 24px 70px rgba(20,67,105,.16); }
-.access-mark { display: grid; place-items: center; width: 60px; height: 60px; margin-bottom: 25px; color: #fff; border-radius: 18px; background: linear-gradient(145deg,#0872c9,#073f7a); box-shadow: 0 12px 26px rgba(7,85,159,.25); font-size: 27px; font-weight: 800; }
+.access-mark { display: block; width: 72px; height: 72px; margin-bottom: 25px; padding: 3px; object-fit: contain; border: 1px solid rgba(7,85,159,.15); border-radius: 50%; background: #fff; box-shadow: 0 12px 26px rgba(7,85,159,.22); }
 .access-eyebrow { margin: 0 0 9px; color: #0872c9; font-size: 12px; font-weight: 800; letter-spacing: .14em; }
 .access-card h1 { margin: 0; color: #11304c; font-size: 28px; line-height: 1.25; }
 .access-card > p { margin: 14px 0 27px; color: #5c7184; line-height: 1.7; }
