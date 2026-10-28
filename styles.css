@@ -203,3 +203,16 @@ footer a { white-space: nowrap; text-decoration: none; font-weight: 700; }
   footer { padding: 25px 0 0; }
   a { color: inherit; text-decoration: none; }
 }
+
+/* Detailed reference tables: horizontal scrolling stays within the article. */
+.hero { position: relative; overflow: hidden; }
+.guide h5, .guide h6 { margin: 28px 0 12px; font-size: 1rem; line-height: 1.6; scroll-margin-top: 24px; }
+.table-scroll { max-width: 100%; overflow-x: auto; margin: 22px 0; border: 1px solid var(--line); border-radius: 12px; }
+.table-scroll:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.guide table { width: 100%; min-width: 640px; border-collapse: collapse; font-size: .9rem; line-height: 1.75; background: var(--surface); }
+.guide th, .guide td { padding: 12px 15px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.guide th { background: var(--blue-soft); color: var(--ink); font-weight: 700; }
+.guide td + td, .guide th + th { border-left: 1px solid var(--line); }
+.guide tr:last-child td { border-bottom: 0; }
+.guide pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+@media print { .table-scroll { overflow: visible; } .guide table { min-width: 0; font-size: 9pt; } .guide tr { break-inside: avoid; } .guide thead { display: table-header-group; } }

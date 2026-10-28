@@ -52,7 +52,8 @@ function renderMarkdown(markdown) {
     list = null;
   };
 
-  for (const line of lines) {
+  for (let lineIndex = 0; lineIndex < lines.length; lineIndex++) {
+    const line = lines[lineIndex];
     if (code !== null) {
       if (/^```/.test(line)) {
         html.push(`<pre><code>${escapeHtml(code.join('\n'))}</code></pre>`);
@@ -61,7 +62,23 @@ function renderMarkdown(markdown) {
       continue;
     }
     if (/^```/.test(line)) { flushParagraph(); flushList(); code = []; continue; }
-    const heading = line.match(/^(#{1,4})\s+(.+)$/);
+    // Recognize a header plus a Markdown table separator before parsing prose.
+    const cells = row => row.trim().replace(/^\|/, '').replace(/\|$/, '').split('|').map(cell => cell.trim());
+    if (line.trim().startsWith('|') && lines[lineIndex + 1]?.trim().startsWith('|') &&
+        cells(lines[lineIndex + 1]).every(cell => /^:?-{3,}:?$/.test(cell))) {
+      flushParagraph(); flushList();
+      const headers = cells(line);
+      const rows = [];
+      lineIndex += 2;
+      while (lineIndex < lines.length && lines[lineIndex].trim().startsWith('|')) {
+        rows.push(cells(lines[lineIndex]));
+        lineIndex++;
+      }
+      lineIndex--;
+      html.push(`<div class="table-scroll" role="region" aria-label="${escapeHtml(headers.join('、'))}" tabindex="0"><table><thead><tr>${headers.map(cell => `<th scope="col">${inline(cell)}</th>`).join('')}</tr></thead><tbody>${rows.map(row => `<tr>${headers.map((_, index) => `<td>${inline(row[index] || '')}</td>`).join('')}</tr>`).join('')}</tbody></table></div>`);
+      continue;
+    }
+    const heading = line.match(/^(#{1,6})\s+(.+)$/);
     if (heading) {
       flushParagraph(); flushList();
       const level = heading[1].length;
