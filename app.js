@@ -20,9 +20,9 @@ function inline(text) {
   let out = escapeHtml(text);
   out = out.replace(/!\[\[([^\]|]+)(?:\|([^\]]+))?\]\]/g, (_, file, size) => {
     const width = size && /^\d+$/.test(size) ? ` style="width:${size}px"` : '';
-    return `<img class="content-image" src="assets/${encodeURI(file)}" alt="文中示例图片" loading="lazy"${width}>`;
+    return `<img referrerpolicy="no-referrer" class="content-image" src="assets/${encodeURI(file)}" alt="文中示例图片" loading="lazy"${width}>`;
   });
-  out = out.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img class="content-image" src="$2" alt="$1" loading="lazy">');
+  out = out.replace(/!\[([^\]]*)\]\(([^)]+)\)/g, '<img referrerpolicy="no-referrer" class="content-image" src="$2" alt="$1" loading="lazy">');
   out = out.replace(/\[([^\]]+)\]\(([^)]+)\)/g, (_, label, href) => {
     const safeHref = /^(https?:\/\/|#|mailto:)/i.test(href) ? href : `https://${href}`;
     const external = /^(https?:\/\/|mailto:)/i.test(safeHref);
