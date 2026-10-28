@@ -121,9 +121,20 @@ Hello，大家好！欢迎大家加入机器人学院青年志愿者服务队运
 
 > **海报模板就用 Canva、稿定；平时改图就用 PS；活动照片多就用 LR；临时没软件就用 Photopea；只想快速抠图就用 remove.bg。**
 
-![文中示例图片](https://img2024.cnblogs.com/blog/3159988/202609/3159988-20260919230816170-1780824958.png#tool-icon)
+**Lightroom 教程**
 
-![文中示例图片](https://img2024.cnblogs.com/blog/3159988/202609/3159988-20260919230820493-1157612951.png#tool-icon)
+[![点击图片观看 Lightroom 教程](https://img2024.cnblogs.com/blog/3159988/202609/3159988-20260919230816170-1780824958.png#tool-icon)](https://www.bilibili.com/video/BV1f14y1V7Jq?spm_id_from=333.788.videopod.sections&vd_source=e105646cad1184af6076c031efcf6fb8)
+
+[点击图片或此处观看 LR 教程](https://www.bilibili.com/video/BV1f14y1V7Jq?spm_id_from=333.788.videopod.sections&vd_source=e105646cad1184af6076c031efcf6fb8)。
+
+**Photoshop 教程**
+
+[![点击图片观看 Photoshop 教程一 P1](https://img2024.cnblogs.com/blog/3159988/202609/3159988-20260919230820493-1157612951.png#tool-icon)](https://www.bilibili.com/video/BV1WZmdYtERy/?spm_id_from=333.1387.upload.video_card.click&vd_source=e105646cad1184af6076c031efcf6fb8)
+
+点击 PS 图片打开教程一 P1，也可选择以下入口：
+
+- 教程一：[P1](https://www.bilibili.com/video/BV1WZmdYtERy/?spm_id_from=333.1387.upload.video_card.click&vd_source=e105646cad1184af6076c031efcf6fb8) · [P2](https://www.bilibili.com/video/BV1WZmdYtERy/?spm_id_from=333.788.player.switch&vd_source=e105646cad1184af6076c031efcf6fb8&p=2)
+- [教程二](https://www.bilibili.com/video/BV1Xs411q7DW/?spm_id_from=333.1387.upload.video_card.click)
 
 ### 1.3 常用文字编辑软件的使用
 
